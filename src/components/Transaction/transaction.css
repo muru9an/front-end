@@ -1,0 +1,119 @@
+.transaction-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+}
+
+.transaction-container h1 {
+  text-align: center;
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.card {
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.first-card {
+  background-color: #e3f2fd; /* Light blue background for first card */
+}
+
+.second-card {
+  background-color: #fff3e0; /* Light orange background for second card */
+}
+
+.dropdown {
+  margin-bottom: 15px;
+}
+
+.dropdown label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.dropdown select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+}
+
+.dropdown select:focus {
+  border-color: #007bff;
+}
+
+.financial-summary {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #e9f7fe;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.financial-summary h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.financial-summary p {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.transaction-table {
+  margin-top: 20px;
+}
+
+.transaction-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.transaction-table th,
+.transaction-table td {
+  padding: 12px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+.transaction-table th {
+  background-color: #007bff;
+  color: white;
+}
+
+.transaction-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.logout-btn {
+  position: absolute; /* Position it relative to the nearest positioned ancestor */
+  right: -20px; /* Adjust the distance from the right */
+  top: 20px; /* Adjust the distance from the top (below the navbar) */
+  padding: 10px 20px; /* Adjust padding for better look */
+  background-color: #ff4d4d; /* Choose your preferred background color */
+  color: white; /* Text color */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.logout-btn:hover {
+  background-color: #ff1a1a; /* Darker shade on hover */
+}

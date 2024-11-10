@@ -1,0 +1,115 @@
+/* Container for the whole dashboard */
+.dashboard-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f0f4f8; /* Light background for contrast */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px; /* More pronounced border radius */
+}
+
+/* Title styling */
+.dashboard-container h1 {
+    text-align: center;
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 40px;
+    font-family: 'Arial', sans-serif; /* Clean font */
+}
+
+/* Options container */
+.dashboard-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Each dashboard card */
+.dashboard-card {
+    flex: 1;
+    min-width: 250px;
+    max-width: 30%;
+    margin: 20px;
+    padding: 20px;
+    background-color: #ffffff; /* White background for cards */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+/* Add colorful backgrounds for each card */
+.dashboard-card:nth-child(1) {
+    background-color: #ffccbc; /* Light coral */
+}
+
+.dashboard-card:nth-child(2) {
+    background-color: #b2dfdb; /* Light teal */
+}
+
+.dashboard-card:nth-child(3) {
+    background-color: #ffe0b2; /* Light orange */
+}
+
+.dashboard-card:nth-child(4) {
+    background-color: #c5cae9; /* Light lavender */
+}
+
+/* Title styling inside cards */
+.dashboard-card h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Paragraph styling inside cards */
+.dashboard-card p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Hover effect for cards */
+.dashboard-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Add Admin Card */
+.dashboard-card:nth-child(5) {
+    background-color: #f8bbd0; /* Light pink for Add Admin */
+}
+
+/* Same hover and responsive behavior for the Add Admin card */
+.dashboard-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+.logout-btn {
+    position: absolute; /* Position it relative to the nearest positioned ancestor */
+    right: 20px; /* Adjust the distance from the right */
+    top: 70px; /* Adjust the distance from the top (below the navbar) */
+    padding: 10px 20px; /* Adjust padding for better look */
+    background-color: #ff4d4d; /* Choose your preferred background color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+  }
+  
+  .logout-btn:hover {
+    background-color: #ff1a1a; /* Darker shade on hover */
+  }
+
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .dashboard-card {
+        max-width: 100%;
+        margin: 10px 0;
+    }
+}

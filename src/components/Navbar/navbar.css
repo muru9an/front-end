@@ -1,0 +1,68 @@
+/* navbar.css */
+.navbar {
+    background-color: #343a40; /* Dark gray color */
+    padding: 10px 20px; /* Reduced top and bottom padding for height */
+    display: flex;
+    justify-content: flex-start; /* Align items to the left */
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white; /* White color for logo */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin-left: 80px; /* Added margin to move nav links a little left */
+    
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white; /* White color for links */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.nav-links a:hover {
+    color: #ffc107; /* Yellow color on hover */
+}
+
+.button-container {
+    display: flex; /* Keep buttons in a row */
+    gap: 10px; /* Space between buttons */
+    margin-left: 10px; /* Align button container to the right */
+}
+
+.log-button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #28a745; /* Green color for login button */
+    color: white;
+    cursor: pointer;
+    margin-left: 60px;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column; /* Stack header elements vertically */
+        align-items: center;
+    }
+
+    .nav-links {
+        flex-direction: column; /* Stack navigation links vertically */
+        align-items: center;
+        margin-top: 10px; /* Adds space between logo and navigation */
+    }
+
+    .nav-links li {
+        margin: 10px 0; /* Adds spacing between navigation links */
+    }
+}

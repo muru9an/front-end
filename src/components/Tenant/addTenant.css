@@ -1,0 +1,99 @@
+.add-tenant-container {
+  position: relative; /* Position relative for background */
+  overflow: hidden; /* Prevent overflow */
+  width: 100%; /* Full width */
+  min-height: 100vh; /* Ensure full height */
+}
+
+.add-tenant-form {
+  max-width: 700px; /* Form width */
+  margin: 0 auto; /* Center the form */
+  padding: 30px; /* Padding for the form */
+  background-color: rgba(255, 255, 255, 0.85); /* Transparent background */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  position: relative; /* To position the background image */
+  z-index: 1; /* Bring form above background */
+}
+
+/* Title styling */
+.add-tenant-form h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 28px; /* Increased font size */
+  font-weight: bold; /* Bolder font weight */
+}
+
+/* Label styling */
+.add-tenant-form label {
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 8px; /* Space below labels */
+  display: block; /* Ensure labels are block elements */
+  width: 150px; /* Fixed width for labels */
+  float: left; /* Align labels to the left */
+}
+
+/* Form group for consistent alignment */
+.form-group {
+  margin-bottom: 20px; /* Space between groups */
+  width: 100%; /* Full width for the group */
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Center items vertically */
+}
+
+/* Input and select field styling */
+.add-tenant-form input,
+.add-tenant-form select {
+  width: 100%; /* Full width for inputs and selects */
+  height: 48px; /* Fixed height for uniformity */
+  padding: 12px; /* Padding for comfort */
+  border: 1px solid #ccc;
+  border-radius: 6px; /* Rounded corners */
+  font-size: 16px; /* Increased font size */
+  transition: border-color 0.3s ease; /* Smooth transition for focus */
+  box-sizing: border-box; /* Include padding and border in width */
+  margin-left: 10px; /* Space between label and input */
+}
+
+/* Input focus styles */
+.add-tenant-form input:focus,
+.add-tenant-form select:focus {
+  border-color: #007bff; /* Highlight border color on focus */
+  outline: none; /* Remove default outline */
+}
+
+/* Button styling */
+.add-tenant-form button {
+  width: 100%; /* Full width for the button */
+  padding: 14px; /* Increased button padding */
+  background-color: #007bff;
+  color: #fff;
+  font-size: 18px; /* Increased button font size */
+  border: none;
+  border-radius: 6px; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.add-tenant-form button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Dark background image styling */
+.add-tenant-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../../../public/background.jpg'); /* Replace with your image path */
+  background-size: cover; /* Ensure the image covers the entire area */
+  background-position: center;
+  opacity: 0.6; /* Darken the background image */
+  z-index: 0; /* Send the background behind the form */
+}

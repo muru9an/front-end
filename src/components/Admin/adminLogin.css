@@ -1,0 +1,113 @@
+/* Main container for the login page */
+.super-admin-login-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* Stretch items to fill the container height */
+    max-width: 900px; /* Maximum width of the container */
+    max-height: auto;
+    margin: 50px auto; /* Center the container and add top margin */
+    padding: 20px; /* Padding inside the container */
+    background: #ffffff; /* Background color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+/* Styling for the login image */
+.login-image {
+    flex: 1; /* Make the image container flexible */
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+    overflow: hidden; /* Hide any overflow */
+    border-radius: 8px; /* Rounded corners for the image container */
+}
+
+.login-image img {
+    width: 100%; /* Make the image fill the container */
+    height: auto; /* Maintain the aspect ratio */
+    object-fit: cover; /* Cover the container while maintaining aspect ratio */
+}
+
+/* Container for the form */
+.form-container {
+    flex: 1; /* Make the form container flexible */
+    padding: 20px; /* Padding inside the form container */
+}
+
+/* Header styling */
+.form-container h1 {
+    text-align: center; /* Center the header text */
+    color: #333; /* Dark gray color for the header */
+    margin-bottom: 20px; /* Space below the header */
+}
+
+/* Form styling */
+.form-container form {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Arrange items in a column */
+}
+
+/* Styling for each form field */
+.form-container .form-field {
+    margin-bottom: 15px; /* Space between fields */
+}
+
+/* Label styling */
+.form-container label {
+    display: block; /* Make label take full width */
+    font-weight: bold; /* Bold text for labels */
+    margin-bottom: 5px; /* Space below labels */
+    color: #555; /* Medium gray for labels */
+}
+
+/* Input styling */
+.form-container input {
+    width: 100%; /* Full width for input fields */
+    padding: 10px; /* Padding inside input fields */
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 4px; /* Rounded corners for inputs */
+    font-size: 16px; /* Font size for input text */
+}
+
+/* Button styling */
+.form-container button {
+    padding: 10px 20px; /* Padding for buttons */
+    background-color: #007bff; /* Blue background for buttons */
+    color: #fff; /* White text color */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners for buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size for button text */
+    font-weight: bold; /* Bold text for buttons */
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+
+/* Button hover effect */
+.form-container button:hover {
+    background-color: #0056b3; /* Darker blue for hover effect */
+}
+
+/* Button focus effect */
+.form-container button:focus {
+    outline: none; /* Remove outline on focus */
+}
+
+/* Footer styling */
+.footer {
+    text-align: center; /* Center the footer text */
+    margin-top: auto; /* Push footer to the bottom */
+    padding: 10px; /* Padding inside the footer */
+    background-color: #f4f6f9; /* Light gray background for the footer */
+    border-radius: 0 0 8px 8px; /* Rounded corners at the bottom */
+}
+
+/* Optional: Additional styles for responsive design */
+@media (max-width: 600px) {
+    .super-admin-login-container {
+        flex-direction: column; /* Stack image and form on smaller screens */
+    }
+
+    .login-image {
+        display: none; /* Hide image on small screens */
+    }
+}

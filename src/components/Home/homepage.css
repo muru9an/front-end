@@ -1,0 +1,245 @@
+/* General Styles */
+.HomePage {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.header {
+    background-color: #343a40; /* Dark gray color */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white; /* White color for logo */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white; /* White color for links */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.nav-links a:hover {
+    color: #ffc107; /* Yellow color on hover */
+}
+
+.login-button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #28a745; /* Green color for login button */
+    color: white;
+    cursor: pointer;
+}
+
+/* Property Management Section */
+.property-management-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #f2f2f2;
+}
+
+.property-management-content {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.property-management-text {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.property-management-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.property-management-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.cta-button {
+    padding: 10px 20px;
+    background-color: #007bff; /* Blue color for CTA buttons */
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: 10px 0; /* Space between buttons */
+    width: 250px; /* Set a fixed width */
+    height: 60px; /* Set a fixed height */
+    display: flex; /* Use flexbox for better alignment */
+    align-items: center; /* Center text vertically */
+    justify-content: center; /* Center text horizontally */
+    text-align: center; /* Center text in button */
+}
+
+
+/* Statistics Section */
+.statistics-section {
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+.statistics {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.statistics div {
+    flex: 1 1 200px; /* Allow flex items to grow and shrink, with a base width */
+    text-align: center;
+    margin-bottom: 20px; /* Space below each statistic */
+}
+
+/* Featured Properties Section */
+.featured-section {
+    padding: 50px 20px;
+}
+
+.property-cards {
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap to next line on smaller screens */
+    justify-content: space-around; /* Center cards in the section */
+}
+
+.property-card {
+    flex: 0 0 350px; /* Increase width */
+    text-align: center;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px; /* Increased padding for more height */
+    background-color: #fff;
+    display: flex; /* Enable flexbox for equal height */
+    flex-direction: column; /* Stack elements vertically */
+    height: 350px; /* Set a specific height for cards */
+}
+
+/* Set images to fill a specific height while maintaining aspect ratio */
+.property-card img {
+    width: 100%;
+    height: 300px; /* Increased height */
+    object-fit: cover; /* Maintain aspect ratio */
+    border-radius: 5px;
+}
+
+
+/* News Section */
+.news-section {
+    padding: 50px 20px;
+}
+
+.news-cards {
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap to next line on smaller screens */
+    justify-content: space-around; /* Center news cards */
+}
+
+.news-card {
+    flex: 0 0 300px; /* Fixed width for each card */
+    text-align: center;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    background-color: #fff;
+    display: flex; /* Enable flexbox for equal height */
+    flex-direction: column; /* Stack elements vertically */
+    height: 100%; /* Ensure cards take full height */
+}
+
+/* News card image styling */
+.news-card img {
+    width: 100%;
+    height: 200px; /* Set a specific height for the images */
+    object-fit: cover; /* Maintain aspect ratio */
+    border-radius: 5px;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center; /* Center the buttons horizontally */
+    margin-top: 20px; /* Add some space above the buttons */
+}
+
+
+.register-btn {
+    background-color: #4CAF50; /* Green background */
+    border: none;              /* Remove borders */
+    color: white;               /* White text */
+    padding: 15px 32px;         /* Padding */
+    text-align: center;         /* Center text */
+    text-decoration: none;      /* Remove underline */
+    display: inline-block;      /* Make the button inline-block */
+    font-size: 16px;            /* Font size */
+    margin: 10px 0;             /* Margin */
+    cursor: pointer;            /* Pointer cursor on hover */
+    border-radius: 5px;         /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.register-btn:hover {
+    background-color: #45a049;  /* Darker green on hover */
+}
+
+
+
+/* Footer Section */
+.footer {
+    background-color: #343a40; /* Same dark gray color */
+    color: white; /* White color for footer text */
+    text-align: center; /* Center text in footer */
+    padding: 20px; /* Padding for the footer */
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .header {
+        flex-direction: column; /* Stack header elements vertically */
+        align-items: center;
+    }
+
+    .nav-links {
+        flex-direction: column; /* Stack navigation links vertically */
+        align-items: center;
+        margin-top: 10px; /* Adds space between logo and navigation */
+    }
+
+    .nav-links li {
+        margin: 10px 0; /* Adds spacing between navigation links */
+    }
+
+    .statistics {
+        text-align: center; /* Center the statistics text */
+    }
+
+    .featured-section {
+        text-align: center; /* Center text in the featured section */
+    }
+}

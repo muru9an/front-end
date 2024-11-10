@@ -1,0 +1,189 @@
+/* General container styles for all company components */
+.company-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.company-container h2 {
+    text-align: center;
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Fancy button styles */
+.company-container button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #007bff, #0056b3); /* Gradient background */
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Added box-shadow transition */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    box-shadow: 0 2px 5px rgba(0, 123, 255, 0.3); /* Subtle shadow effect */
+    margin: 10px 0; /* Add margin to create space between buttons */
+}
+
+.company-container button:hover {
+    background: linear-gradient(135deg, #0056b3, #004494); /* Darker gradient on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.5); /* Stronger shadow on hover */
+}
+
+/* Additional styles for disabled buttons */
+.company-container button:disabled {
+    background: #ccc; /* Grey background for disabled state */
+    cursor: not-allowed;
+    box-shadow: none; /* Remove shadow for disabled state */
+    color: #666; /* Lighter text color */
+}
+
+/* Form input styling */
+.company-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.company-container input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.company-container input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Company list card styling */
+.company-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.company-container li {
+    background-color: #ffffff;
+    margin: 15px 0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.company-container li:hover {
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+/* Icon and image for fancy cards */
+.company-container .company-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.company-container .company-info img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.company-container .company-info .company-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.company-container .company-info h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.company-container .company-info p {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+}
+
+.company-container .company-info .company-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.company-container .company-info .company-icons i {
+    font-size: 24px;
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+
+.company-container .company-info .company-icons i:hover {
+    color: #0056b3;
+}
+
+.person-info {
+    display: flex;
+    align-items: center; /* Align image and text */
+    margin-bottom: 10px; /* Space between persons */
+}
+
+.person-info img {
+    width: 50px; /* Set width for person image */
+    height: 50px; /* Set height for person image */
+    border-radius: 50%; /* Make image circular */
+    margin-right: 10px; /* Space between image and text */
+}
+
+.person-details p {
+    margin: 2px 0; /* Space between lines in person details */
+}
+
+.company-icons {
+    margin-top: 10px; /* Space above buttons */
+}
+
+/* Positioning the logout button */
+.logout-button {
+    position: absolute;
+    top: 90px;
+    right: 80px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .company-container button {
+        width: 100%;
+    }
+
+    .company-container li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .company-container .company-info img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .company-container .company-info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

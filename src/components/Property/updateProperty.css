@@ -1,0 +1,41 @@
+/* UpdateProperty.css */
+.update-property {
+    background-color: #f4f4f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.update-property h2 {
+    color: #3f51b5;
+}
+
+.update-property form {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.update-property input[type="text"],
+.update-property input[type="number"],
+.update-property input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.update-property button {
+    background-color: #3f51b5;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.update-property button:hover {
+    background-color: #303f9f;
+}
