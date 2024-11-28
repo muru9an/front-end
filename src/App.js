@@ -30,7 +30,9 @@ function App() {
   return (
     
     <Routes>
-        <Route path="/" element={<Home />} />
+        {/* <Route path="/" element={<Home />} /> */}
+        <Route path="/" element={<SuperAdminLogin />} />
+
         <Route path="/super-admin/signup" element={<SuperAdminSignUp />} />
         <Route path="/super-admin/signin" element={<SuperAdminLogin />} />
 

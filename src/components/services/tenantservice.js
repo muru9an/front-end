@@ -47,10 +47,15 @@ export const verifyOtp = (otpData) => {
 };
 
 // Pay Rent
-export const payRent = (paymentData, token) => {
-  return axios.post(`${API_URL}/pay-rent`, paymentData, {
-    headers: { Authorization: `Bearer ${token}` },
-  });
+// export const payRent = (paymentData, token) => {
+//   return axios.post(`${API_URL}/pay-rent`, paymentData, {
+//     headers: { Authorization: `Bearer ${token}` },
+//   });
+// };
+
+// Pay Rent Without Bearer Token
+export const payRent = (paymentData) => {
+  return axios.post(`${API_URL}/pay-rent`, paymentData);
 };
 
 // File Complaint

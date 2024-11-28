@@ -68,7 +68,7 @@ const CompanyList = () => {
     }
   };
   
-  return (
+  return (<>
     <div className="company-container">
       <h2>Company List</h2>
       
@@ -130,6 +130,11 @@ const CompanyList = () => {
         ))}
       </ul>
     </div>
+    <div>
+    <button className="add-tenant-btn" onClick={()=>{  navigate('/super-admin/dashboard', { state: { role: role }});}}>
+     Go to dashboard
+   </button>
+   </div></>
   );
 };
 

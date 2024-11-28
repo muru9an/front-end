@@ -30,6 +30,10 @@
     transition: color 0.3s; /* Smooth transition for hover effect */
 }
 
+.nav-links ul:last-child{
+    direction:rtl;
+  }
+
 .nav-links a:hover {
     color: #ffc107; /* Yellow color on hover */
 }
@@ -48,6 +52,16 @@
     cursor: pointer;
     margin-left: 60px;
 }
+
+.logout-btn {
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #a72828; /* Green color for login button */
+    color: white;
+    cursor: pointer;
+    margin-left: 60px;
+    align-items: flex-end;
+  }
 
 /* Responsive Design */
 @media (max-width: 480px) {

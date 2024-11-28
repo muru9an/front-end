@@ -42,10 +42,16 @@ const ListProperties = () => {
   };
 
   return (
+    <>
     <div className="list-properties">
       <h2>Property List</h2>
-      <button onClick={logout} className="logout-btn">Logout</button>
-
+      {/* <button onClick={logout} className="logout-btn">Logout</button> */}
+      {role === 'superadmin' && (
+        <button className="add-tenant-btn" onClick={()=>{ navigate('/create-property', { state: { role: role }});}}>
+          Add New Property
+        </button>
+     
+      )}
       {properties.length > 0 ? (
         <table>
           <thead>
@@ -77,7 +83,6 @@ const ListProperties = () => {
                 <td className="action-buttons">
                   {role === 'superadmin' && ( // Conditional rendering for Add and Delete buttons
                     <>
-                      <Link to="/create-property" className="add-btn">Add</Link>
                       <button onClick={() => handleDelete(property.propertyId)} className="delete-btn">Delete</button>
                     </>
                   )}
@@ -91,6 +96,13 @@ const ListProperties = () => {
         <p>No properties found.</p>
       )}
     </div>
+      <br/>
+      <div>
+       <button className="add-tenant-btn" onClick={()=>{  navigate('/super-admin/dashboard', { state: { role: role }});}}>
+        Go to dashboard
+      </button>
+      </div>
+      </>
   );
 };
 

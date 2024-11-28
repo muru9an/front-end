@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { sendOtp, verifyOtp, payRent, fileComplaint } from '../services/tenantservice';
+import { sendOtp, verifyOtp, payRent, fileComplaint, payRentWithoutBearerToken } from '../services/tenantservice';
 import styles from './TenantPage.module.css';  // Corrected path to CSS module
 
 const TenantPage = () => {
@@ -40,7 +40,8 @@ const TenantPage = () => {
   const handlePayRent = async (e) => {
     e.preventDefault();
     try {
-      await payRent({ amount: rentAmount }, token);
+      // await payRent({ amount: rentAmount }, token);
+      await payRent({ amount: rentAmount });
       setMessage('Rent paid successfully.');
     } catch (error) {
       setMessage(error.response?.data?.message || 'Failed to pay rent.');
@@ -100,7 +101,7 @@ const TenantPage = () => {
         </form>
       )}
 
-      {isLoggedIn && (
+      {/* {isLoggedIn && ( */}
         <>
           <h3 className={styles.sectionTitle}>Pay Rent</h3>
           <form className={styles.form} onSubmit={handlePayRent}>
@@ -127,7 +128,7 @@ const TenantPage = () => {
             <button className={styles.button} type="submit">File Complaint</button>
           </form>
         </>
-      )}
+      {/* )} */}
 
       {message && <p className={message.includes('successful') ? styles.success : styles.error}>{message}</p>}
    

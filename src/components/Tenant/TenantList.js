@@ -50,9 +50,10 @@ const TenantList = () => {
     }
   };
   return (
+    <>
     <div className="tenant-list-container">
       <h2>Tenant List</h2>
-      <button className="logout-btn" onClick={logout}>Logout</button>
+      {/* <button className="logout-btn" onClick={logout}>Logout</button> */}
       {role === 'superadmin' && (
       <button className="add-tenant-btn" onClick={handleAddTenant}>
         Add Tenant
@@ -89,6 +90,14 @@ const TenantList = () => {
         </tbody>
       </table>
     </div>
+    <br/>
+    <div>
+       <button className="add-tenant-btn" onClick={()=>{  navigate('/super-admin/dashboard', { state: { role: role }});}}>
+        Go to dashboard
+      </button>
+    </div>
+    </>
+
   );
 };
 

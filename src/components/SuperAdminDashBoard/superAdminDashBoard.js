@@ -61,7 +61,7 @@ const SuperAdminDashboard = () => {
                 )}
 
             </div>
-            <button onClick={logout} className="logout-btn">Logout</button>
+            {/* <button onClick={logout} className="logout-btn">Logout</button> */}
         </div>
     );
 };

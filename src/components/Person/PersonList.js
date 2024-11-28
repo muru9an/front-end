@@ -138,6 +138,12 @@ const PersonList = () => {
           </List>
         )}
       </Box>
+      <br/>
+      <div>
+       <button className="add-tenant-btn" onClick={()=>{  navigate('/super-admin/dashboard', { state: { role: role }});}}>
+        Go to dashboard
+      </button>
+    </div>
     </Container>
   );
 };
