@@ -71,7 +71,7 @@ const PersonList = () => {
         </Typography>
 
         {/* Add Person Button inside the card */}
-        {role === 'superadmin' && (
+        {/* {role === 'superadmin' && ( */}
           <Box display="flex" justifyContent="flex-end" mb={2}>
             <Button
               variant="contained"
@@ -82,7 +82,7 @@ const PersonList = () => {
               Add Stakeholder
             </Button>
           </Box>
-        )}
+        {/* )} */}
 
         {persons.length === 0 ? (
           <Typography variant="h6" align="center" color="textSecondary">
@@ -122,7 +122,7 @@ const PersonList = () => {
                   >
                     Edit
                   </Button>
-                  {role === 'superadmin' && (
+                  {/* {role === 'superadmin' && ( */}
                     <Button
                       variant="outlined"
                       color="error"
@@ -131,7 +131,7 @@ const PersonList = () => {
                     >
                       Delete
                     </Button>
-                  )}
+                  {/* )} */}
                 </Box>
               </ListItem>
             ))}

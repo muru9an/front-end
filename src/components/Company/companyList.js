@@ -72,18 +72,18 @@ const CompanyList = () => {
     <div className="company-container">
       <h2>Company List</h2>
       
-      <div className="top-right">
+      {/* <div className="top-right">
         <button onClick={logout} className="logout-button">
           Log Out
         </button>
-      </div>
+      </div> */}
       
       {/* Render the Add Company button only for Super Admin */}
-      {role === 'superadmin' && (
+      {/* {role === 'superadmin' && ( */}
         <button onClick={addCompany} className="add-company-btn">
           <FaBuilding /> Add Company
         </button>
-      )}
+      {/* )} */}
 
       <ul>
         {companies.map((company) => (
@@ -121,9 +121,9 @@ const CompanyList = () => {
             <div className="company-icons">
               <button onClick={() => updateCompany(company.companyId)}>Update Company</button>
               {/* Render delete button only for Super Admin */}
-              {role === 'superadmin' && (
+              {/* {role === 'superadmin' && ( */}
                 <button onClick={() => deleteCompany(company.companyId)}>Delete Company</button>
-              )}
+              {/* )} */}
               <button onClick={() => managePersons(company.companyId)}>Manage Stakeholder</button>
             </div>
           </li>
@@ -131,6 +131,7 @@ const CompanyList = () => {
       </ul>
     </div>
     <div>
+      <br/>
     <button className="add-tenant-btn" onClick={()=>{  navigate('/super-admin/dashboard', { state: { role: role }});}}>
      Go to dashboard
    </button>

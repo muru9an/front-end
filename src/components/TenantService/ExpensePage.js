@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { sendOtp, verifyOtp, payRent, fileComplaint } from '../services/tenantservice';
+import { sendOtp, verifyOtp, payExpenseAmount, fileComplaint } from '../services/tenantservice';
 import { 
   fetchCompanies, 
   fetchPropertiesByCompany, 
@@ -9,12 +9,9 @@ import {
 import styles from './TenantPage.module.css';  // Corrected path to CSS module
 
 
-const TenantPage = () => {
-  const [email, setEmail] = useState('');
-  const [otp, setOtp] = useState('');
-  const [otpSent, setOtpSent] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [rentAmount, setRentAmount] = useState('');
+const Outgoing = () => {
+
+  const [expenseAmount, setExpenseAmount] = useState('');
   const [complaint, setComplaint] = useState('');
   const [token, setToken] = useState('');
   const [message, setMessage] = useState('');
@@ -66,58 +63,18 @@ const TenantPage = () => {
     loadTenants();
   }, [selectedPropertyId]);
   
-  const handleSendOtp = async (e) => {
-    e.preventDefault();
-    try {
-      const response = await sendOtp({ email });
-      setOtpSent(true);
-      setMessage('OTP sent to your email.');
-    } catch (error) {
-      setMessage(error.response?.data?.message || 'Failed to send OTP.');
-    }
-  };
-
-  const handleVerifyOtp = async (e) => {
-    e.preventDefault();
-    try {
-      const response = await verifyOtp({ email, otp });
-      setToken(response.data.token);
-      setIsLoggedIn(true);
-      setMessage('OTP verified, login successful.');
-    } catch (error) {
-      setMessage(error.response?.data?.message || 'Failed to verify OTP.');
-    }
-  };
-
-  const handlePayRent = async (e) => {
+  const handleExpenseAmount = async (e) => {
     e.preventDefault();
     try {
       // await payRent({ amount: rentAmount }, token);
-      await payRent({ amount: rentAmount, tenantId: selectedTenantId });
-      setMessage('Rent paid successfully.');
+      await payExpenseAmount({ amount: expenseAmount, tenantId: selectedTenantId });
+      setMessage('Expense paid successfully.');
     } catch (error) {
       setMessage(error.response?.data?.message || 'Failed to pay rent.');
     }
   };
 
-  const handleFileComplaint = async (e) => {
-    e.preventDefault();
-    try {
-      await fileComplaint({ complaintText: complaint }, token);
-      setMessage('Complaint filed successfully.');
-    } catch (error) {
-      setMessage(error.response?.data?.message || 'Failed to file complaint.');
-    }
-  };
-
-  
-
-  const logout = () => {
-   
-      navigate('/'); 
-   
-  };
-
+ 
   return (
     <div className={styles.tenantContainer}>
       <h2 className={styles.pageTitle}>Transactions</h2>
@@ -155,8 +112,8 @@ const TenantPage = () => {
 
       {/* {isLoggedIn && ( */}
         <>
-          <h3 className={styles.sectionTitle}>Pay Rent</h3>
-          <form className={styles.form} onSubmit={handlePayRent}>
+          <h3 className={styles.sectionTitle}>Pay Expense</h3>
+          <form className={styles.form} onSubmit={handleExpenseAmount}>
           <div className="dropdowns">
           <div className="dropdown">
             <label>Company:</label>
@@ -199,7 +156,7 @@ const TenantPage = () => {
           )}
         </div>
         
-            <input
+            {/* <input
               className={styles.inputField}
               type="number"
               placeholder="Rent Amount"
@@ -207,7 +164,18 @@ const TenantPage = () => {
               onChange={(e) => setRentAmount(e.target.value)}
               required
             />
-            <button className={styles.button} type="submit">Pay Rent</button>
+            <button className={styles.button} type="submit">Pay Rent</button> */}
+
+        {/* <form className={styles.form} onSubmit={handleFileComplaint}> */}
+            <input
+              className={styles.inputField}
+              type="number"
+              placeholder="Expense Amount"
+              value={expenseAmount}
+              onChange={(e) => setExpenseAmount(e.target.value)}
+              required
+            />
+            <button className={styles.button} type="submit">Pay Expense</button>
           </form>
 
           {/* <h3 className={styles.sectionTitle}>File a Complaint</h3>
@@ -236,4 +204,4 @@ const TenantPage = () => {
   );
 };
 
-export default TenantPage;
+export default Outgoing;

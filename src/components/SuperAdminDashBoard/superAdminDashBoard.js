@@ -47,8 +47,19 @@ const SuperAdminDashboard = () => {
                 </div>
                 <div className="dashboard-card" onClick={() => handleNavigation('/transactions')}>
                     <FontAwesomeIcon icon={faMoneyBill} size="2x" className="card-icon" />
-                    <h2>Manage Transactions</h2>
-                    <p>View and track all transactions related to properties and tenants.</p>
+                    <h2>Manage Reports</h2>
+                    <p>View and track all reports related to properties and tenants.</p>
+                </div>
+
+                <div className="dashboard-card" onClick={() => handleNavigation('/tenant')}>
+                    <FontAwesomeIcon icon={faMoneyBill} size="2x" className="card-icon" />
+                    <h2>Pay Rent</h2>
+                    <p>Pay rent for the property.</p>
+                </div>
+                <div className="dashboard-card" onClick={() => handleNavigation('/expense')}>
+                    <FontAwesomeIcon icon={faMoneyBill} size="2x" className="card-icon" />
+                    <h2>Pay Expense</h2>
+                    <p>Pay expense for the property.</p>
                 </div>
 
                 {/* Render Add Admin button only if the role is 'superadmin' */}

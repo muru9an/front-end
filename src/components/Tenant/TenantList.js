@@ -54,11 +54,11 @@ const TenantList = () => {
     <div className="tenant-list-container">
       <h2>Tenant List</h2>
       {/* <button className="logout-btn" onClick={logout}>Logout</button> */}
-      {role === 'superadmin' && (
+      {/* {role === 'superadmin' && ( */}
       <button className="add-tenant-btn" onClick={handleAddTenant}>
         Add Tenant
       </button>
-      )}
+      {/* )} */}
       <table className="tenant-list-table">
         <thead>
           <tr>
@@ -80,9 +80,9 @@ const TenantList = () => {
               <td>{tenant.rentAmount}</td>
               <td className="tenant-actions">
                 <button onClick={() => handleEdit(tenant.tenantId)}>Edit</button>
-                {role === 'superadmin' && (
+                {/* {role === 'superadmin' && ( */}
                   <button onClick={() => handleDelete(tenant.tenantId)}>Delete</button>
-                  )}
+                  {/* )} */}
 
               </td>
             </tr>

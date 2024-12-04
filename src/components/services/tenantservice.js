@@ -58,6 +58,10 @@ export const payRent = (paymentData) => {
   return axios.post(`${API_URL}/pay-rent`, paymentData);
 };
 
+export const payExpenseAmount = (paymentData) => {
+  return axios.post(`${API_URL}/pay-expense`, paymentData);
+};
+
 // File Complaint
 export const fileComplaint = (complaintData, token) => {
   return axios.post(`${API_URL}/complaint`, complaintData, {

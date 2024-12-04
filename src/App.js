@@ -18,6 +18,7 @@ import PersonList from './components/Person/PersonList';
 import AddPerson from './components/Person/AddPerson';
 import UpdatePerson from './components/Person/UpdatePerson';
 import TenantPage from './components/TenantService/TenantPage';
+import ExpensePage from './components/TenantService/ExpensePage';
 import ComplaintsPage from './components/Person/ComplaintsPage';
 import ResolveComplaint from './components/Person/ResolveComplaint';
 import Transaction from './components/Transaction/Transaction';
@@ -56,6 +57,7 @@ function App() {
         <Route path="/add-tenant" element={<AddTenant/>} />
         <Route path="/update-tenant/:id" element={<UpdateTenant/>} />
      
+        <Route path="/expense" element={<ExpensePage />} />
 
         <Route path="/person/login" element={<PersonLogin />} />
         <Route path="/company/:companyId/persons" element={<PersonList />} />

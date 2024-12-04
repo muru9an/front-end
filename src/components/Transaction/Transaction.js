@@ -260,11 +260,14 @@ const Transaction = () => {
         )}
       </div>)}
 
-      <div className="top-right">
+      {/* <div className="top-right">
         <button onClick={logout} className="logout-btn">
           Log Out
         </button>
-      </div>
+      </div> */}
+          <button className="add-tenant-btn" onClick={()=>{  navigate('/super-admin/dashboard', { state: { role: role }});}}>
+     Go to dashboard
+   </button>
     </div>
   );
 };

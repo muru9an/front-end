@@ -46,12 +46,12 @@ const ListProperties = () => {
     <div className="list-properties">
       <h2>Property List</h2>
       {/* <button onClick={logout} className="logout-btn">Logout</button> */}
-      {role === 'superadmin' && (
+      {/* {role === 'superadmin' && ( */}
         <button className="add-tenant-btn" onClick={()=>{ navigate('/create-property', { state: { role: role }});}}>
           Add New Property
         </button>
      
-      )}
+      {/* )} */}
       {properties.length > 0 ? (
         <table>
           <thead>
@@ -81,11 +81,11 @@ const ListProperties = () => {
                 <td>{property.value}</td>
                 <td>{property.rent}</td>
                 <td className="action-buttons">
-                  {role === 'superadmin' && ( // Conditional rendering for Add and Delete buttons
+                  {/* {role === 'superadmin' && ( // Conditional rendering for Add and Delete buttons */}
                     <>
                       <button onClick={() => handleDelete(property.propertyId)} className="delete-btn">Delete</button>
                     </>
-                  )}
+                  {/* // )} */}
                   <Link to={`/update-property/${property.propertyId}`} className="edit-btn">Edit</Link>
                 </td>
               </tr>
